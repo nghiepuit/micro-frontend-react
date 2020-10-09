@@ -1,0 +1,13 @@
+{
+  "name": "microfrontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "concurrently npm:bootstrap-*",
+    "bootstrap-manual": "cd manual && yarn run bootstrap",
+    "bootstrap-federation": "cd federation && yarn run bootstrap"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "configurations": [
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Build host",
+      "env": { "NODE_ENV": "production" },
+      "cwd": "${workspaceFolder}/federation/host",
+      "program": "node_modules/webpack/bin/webpack.js",
+      "args": ["--config", "config/webpack.config.js"]
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Build remote-a",
+      "env": { "NODE_ENV": "production" },
+      "cwd": "${workspaceFolder}/federation/remote-a",
+      "program": "node_modules/webpack/bin/webpack.js",
+      "args": ["--config", "config/webpack.config.js"]
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Build remote-b",
+      "env": { "NODE_ENV": "production" },
+      "cwd": "${workspaceFolder}/federation/remote-b",
+      "program": "node_modules/webpack/bin/webpack.js",
+      "args": ["--config", "config/webpack.config.js"]
+    }
+  ]
+}

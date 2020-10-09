@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "scripts": {
+    "bootstrap-host": "cd host && yarn install",
+    "bootstrap-remote-a": "cd remote-a && yarn install",
+    "bootstrap-remote-b": "cd remote-b && yarn install",
+    "bootstrap": "../node_modules/.bin/concurrently npm:bootstrap-*",
+    "start-host": "cd host && yarn run start",
+    "start-remote-a": "cd remote-a && yarn run start",
+    "start-remote-b": "cd remote-b && yarn run start",
+    "start": "../node_modules/.bin/concurrently npm:start-*",
+    "build-host": "cd host && yarn run build",
+    "build-remote-a": "cd remote-a && yarn run build",
+    "build-remote-b": "cd remote-b && yarn run build",
+    "build": "../node_modules/.bin/concurrently yarn:build-*",
+    "serve-host": "cd host && yarn run serve",
+    "serve-remote-a": "cd remote-a && yarn run serve",
+    "serve-remote-b": "cd remote-b && yarn run serve",
+    "serve": "../node_modules/.bin/concurrently yarn:serve-*"
+  }
+}
